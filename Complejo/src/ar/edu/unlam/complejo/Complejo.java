@@ -1,6 +1,6 @@
 package ar.edu.unlam.complejo;
 
-public class Complejo {
+public class Complejo implements Comparable<Complejo> {
 	private double real;
 	private double imag;
 	
@@ -96,5 +96,15 @@ public class Complejo {
 	public Complejo conjugado(){
 		return (new Complejo(this.real,(this.imag*(-1))));
 	}
+
+	@Override
+	public int compareTo(Complejo o) {
+		return 0;
+	}
+	
+//	public int compareTo(Complejo c){
+//		return 0;
+//		
+//	}
 	
 }
