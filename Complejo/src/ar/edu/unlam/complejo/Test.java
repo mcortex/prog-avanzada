@@ -1,5 +1,8 @@
 package ar.edu.unlam.complejo;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class Test {
 
 	public static void main(String[] args) {
@@ -23,6 +26,35 @@ public class Test {
 		System.out.println(z7);
 		if ((z1.modulo() == Math.sqrt(z7.getReal())) && z7.getImag() == 0 ){
 			System.out.println("Son modulo");
+		}
+		
+		Complejo z8 = new Complejo(-20,99);
+		Complejo z9 = new Complejo(20,-99);
+		
+		ArrayList<Complejo> lista = new ArrayList<Complejo>();
+		lista.add(z1);
+		lista.add(z2);
+		lista.add(z3);
+		lista.add(z4);
+		lista.add(z5);
+		lista.add(z6);
+		lista.add(z7);
+		lista.add(z8);
+		lista.add(z9);
+		
+		//DESORDENADO
+		for (Complejo valor: lista){
+			System.out.println(valor);
+		}
+		
+		System.out.println();
+		
+		Collections.sort(lista);
+		
+		//ORDENADO
+		for (Complejo valor: lista){
+			System.out.println(valor);
+			System.out.println("Modulo: "+valor.modulo());
 		}
 		
 	}
