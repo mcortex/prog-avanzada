@@ -1,0 +1,1 @@
+El resultado del polinomio es: 5.349785714677402E139
